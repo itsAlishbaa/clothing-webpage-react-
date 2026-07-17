@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const CLOTHING_DATA = [
     {
@@ -31,27 +30,18 @@ export default function Products() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                {CLOTHING_DATA.map((product, idx) => (
-                    <motion.div
-                        key={product.id}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-100px' }}
-                        transition={{ duration: 0.6, delay: idx * 0.15 }}
-                        className="group cursor-pointer"
-                    >
+                {CLOTHING_DATA.map((product) => (
+                    <div key={product.id} className="group cursor-pointer">
                         <div className="overflow-hidden rounded-lg mb-4">
-                            <motion.img
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.4 }}
+                            <img
                                 src={product.img}
                                 alt={product.name}
-                                className="w-full h-[400px] object-cover"
+                                className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
                             />
                         </div>
                         <h3 className="text-lg font-medium text-[#1a1a1a] group-hover:text-[#d4af37] transition-colors">{product.name}</h3>
                         <p className="text-[#d4af37] font-semibold mt-1">{product.price}</p>
-                    </motion.div>
+                    </div>
                 ))}
             </div>
         </section>
