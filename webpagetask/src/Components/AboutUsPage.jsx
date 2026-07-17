@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function AboutUsPage() {
-    // Pure React Styles Objects - standard, secure, and clean!
     const styles = {
         container: {
             padding: '120px 8% 80px',
@@ -107,7 +106,7 @@ export default function AboutUsPage() {
                     />
                 </div>
 
-                {/* Right Side: Philosophy and Details */}
+
                 <div style={styles.content}>
                     <h2 style={styles.subtitle}>Redefining Modern Minimalist Essentials.</h2>
                     <p style={styles.text}>
@@ -117,7 +116,7 @@ export default function AboutUsPage() {
                         Every garment we produce is crafted in limited batches using sustainably sourced materials. We don't design for seasons; we design for lifetimes.
                     </p>
 
-                    {/* Business Stats */}
+
                     <div style={styles.statsRow}>
                         <div style={styles.statItem}>
                             <h4 style={styles.statNum}>100%</h4>
